@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<FlowPane alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SelectModuleTypeController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="66.0" prefWidth="383.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Select Modules Type" textFill="#250cc9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Line endX="100.0" opacity="0.16" startX="-100.0" />
+            <GridPane fx:id="ModulesListCont">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets left="8.0" right="12.0" top="15.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="43.0" prefWidth="401.0">
+         <children>
+            <Button fx:id="ModSelOkBtn" mnemonicParsing="false" text="OK" />
+            <Label fx:id="errorMsgLabel" alignment="CENTER">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</FlowPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddTestCaseController">
+   <children>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <Label text="Create Test Case">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="401.0">
+         <children>
+            <Label text="Test case name: " />
+            <TextField fx:id="testcasename" prefHeight="25.0" prefWidth="293.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="401.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="385.0" spacing="10.0">
+               <children>
+                  <Button fx:id="okbutton" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" text="Ok" />
+                  <Button fx:id="cancelbutton" mnemonicParsing="false" text="Cancel" />
+               </children>
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox fx:id="labelHBox" alignment="TOP_CENTER" prefHeight="61.0" prefWidth="401.0">
+         <children>
+            <Label fx:id="noteId" alignment="TOP_LEFT" contentDisplay="TOP" textFill="#e11010" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="addStepMsgBx" alignment="TOP_LEFT" graphicTextGap="0.0" wrapText="true" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

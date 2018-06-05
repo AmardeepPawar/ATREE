@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GUIController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <Label text="Label" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E0EEEE;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="designPage" text="Design Page">
+               <content>
+                  <BorderPane fx:id="designPageBorderPane" prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <TreeView fx:id="filefoldertree" onContextMenuRequested="#mouseClick" onMouseClicked="#mouseClick" prefHeight="294.0" prefWidth="278.0" BorderPane.alignment="CENTER" />
+                     </left>
+                     <top>
+                        <BorderPane prefHeight="27.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                           <left>
+                              <ToolBar fx:id="treecontol" prefHeight="35.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+                                <items>
+                                    <TextField fx:id="searchtext" onKeyReleased="#keyboardpress" prefHeight="25.0" prefWidth="183.0" promptText="search test case">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </TextField>
+                                  <Button fx:id="addtestcase" alignment="TOP_CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="+">
+                                    <graphic>                                               
+                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//plus.jpg" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                   </Button>
+                                    <Button fx:id="deletetestcase" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="-">
+                                      <graphic>                                               
+                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//remove.jpg" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                    </Button>
+                                    <Button fx:id="changeWStestcase" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="C">
+                                     <graphic>                                               
+                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//changedir.png" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                    </Button>
+                                </items>
+                                 <BorderPane.margin>
+                                    <Insets right="3.0" />
+                                 </BorderPane.margin>
+                              </ToolBar>
+                           </left>
+                           <center>
+                              <ToolBar fx:id="stepButtonContainer" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <items>                   
+                                  <Button fx:id="savebutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//saveicon.jpg" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                  <Button fx:id="addstepbutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//addstep.png" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                  <Button fx:id="deletestepbutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//deletestepicon.png" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                  <Button fx:id="undobutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//undoicon.jpg" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                  <Button fx:id="redobutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//redoicon.png" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                  <Button fx:id="connectflowbutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//addflowicon.png" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                  <Button fx:id="cntLoopLinebutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//loopIcon.png" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                  <Button fx:id="editstepbutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//edit.png" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                </items>
+                                 <BorderPane.margin>
+                                    <Insets left="1.0" right="1.0" />
+                                 </BorderPane.margin>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </ToolBar>
+                           </center>
+                           <right>
+                              <ToolBar fx:id="ModuleButtonContainer" prefHeight="40.0" prefWidth="140.0" BorderPane.alignment="CENTER">
+                                <items>
+                                  <Button fx:id="downloadbutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//download.bmp" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                  <Button fx:id="deleteModbutton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="Button">
+                                  <graphic>                                               
+                                     <ImageView pickOnBounds="true">
+                                       <image>
+                                       <Image url="file:///F://AtreeFolder//trash-icon.gif" />
+                                       </image>
+                                     </ImageView>                                            
+                                    </graphic>
+                                    <font>
+                                      <Font size="1.0" />
+                                    </font>      
+                                  </Button>
+                                </items>
+                                 <BorderPane.margin>
+                                    <Insets left="3.0" />
+                                 </BorderPane.margin>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </ToolBar>
+                           </right>
+                        </BorderPane>
+                     </top>
+                     <center>
+                        <TabPane fx:id="stepDesignTapPane" prefHeight="294.0" prefWidth="165.0" style="-fx-background-color: #F2F2F2;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                          <tabs>                            
+                          </tabs>
+                           <BorderPane.margin>
+                              <Insets left="4.0" right="4.0" />
+                           </BorderPane.margin>
+                        </TabPane>
+                     </center>
+                     <right>
+                        <ScrollPane fx:id="listOfModulesScr" BorderPane.alignment="CENTER">
+                           <content>
+                              <TilePane fx:id="listOfModules" prefHeight="294.0" prefWidth="138.0" style="-fx-background-color: #ffffff;">
+                                 <padding>
+                                    <Insets right="15.0" />
+                                 </padding></TilePane>
+                           </content>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </ScrollPane>
+                     </right>
+                  </BorderPane>
+               </content>
+          </Tab>
+          <Tab text="Execution Page">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;">
+                     <children>
+                        <HBox minHeight="20.0" prefHeight="26.0" prefWidth="600.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label text="Select workspaces">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding></HBox>
+                        <HBox prefHeight="33.0" prefWidth="600.0" spacing="5.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <TextField fx:id="workSpaceBox" prefHeight="25.0" prefWidth="300.0">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TextField>
+                                    <Button fx:id="browseWorkSpaceBtn" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" opacity="0.2" prefHeight="25.0" prefWidth="25.0">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/searchIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="addWorkSpaceBtn" mnemonicParsing="false" text="Add">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                        <ToolBar maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="200.0" style="-fx-border-color: gray;" />
+                        <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TreeTableView fx:id="caseDashboardTable" minHeight="500.0" pickOnBounds="false" showRoot="false" tableMenuButtonVisible="true">
+                                <columns>
+                                  <TreeTableColumn fx:id="srNoCol" minWidth="50.0" prefWidth="-1.0" text="Sr No." />
+                                  <TreeTableColumn fx:id="wrkSpcCseNmCol" minWidth="350.0" prefWidth="-1.0" text="Workspace/Case Name" />
+                                    <TreeTableColumn fx:id="sltCol" minWidth="100.0" prefWidth="-1.0" text="Select" />
+                                    <TreeTableColumn fx:id="runCol" minWidth="50.0" prefWidth="-1.0" text="Run" />
+                                    <TreeTableColumn fx:id="stopCol" minWidth="50.0" prefWidth="-1.0" text="Stop" />
+                                    <TreeTableColumn fx:id="StrtTmCol" minWidth="80.0" prefWidth="-1.0" text="Start Time" />
+                                    <TreeTableColumn fx:id="endTmCol" minWidth="80.0" prefWidth="-1.0" text="End Time" />
+                                    <TreeTableColumn fx:id="resultCol" minWidth="80.0" prefWidth="-1.0" text="Result" />
+                                </columns>
+                              </TreeTableView>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,4 @@
+<modulesType name="Testing Modules" id="testingModules">
+<module name="Data Base" id="dataBaseMod"  jarFile="DBM.jar" icon="DataBase.jpg"  setUpClassPath="atreeDataBase.module.TreeTableViewSample"  executionClassPath=""></module>
+<module name="JMS" id="JMSMod"  jarFile="JMS.jar" icon="JMS.jpg"  setUpClassPath=""  executionClassPath=""></module>
+</modulesType>

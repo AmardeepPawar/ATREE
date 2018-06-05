@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" prefHeight="214.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caseDesigner.Controllers.CreateLoopController">
+   <children>
+      <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" style="-fx-background-color: #CED8F6;">
+         <children>
+            <ImageView fx:id="headerImg" fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" smooth="false">
+            </ImageView>
+            <VBox alignment="CENTER" pickOnBounds="false" prefHeight="39.0" prefWidth="155.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="headerlbl" textFill="#4406ee">
+                     <font>
+                        <Font name="Cambria Bold" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+      <VBox prefHeight="124.0" prefWidth="401.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox minHeight="25.0" prefHeight="25.0" prefWidth="475.0">
+               <children>
+                  <Label text="Create Loop Between Steps">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox fillHeight="false" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="415.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ComboBox fx:id="formStep" prefHeight="25.0" prefWidth="216.0" HBox.hgrow="ALWAYS" />
+                        <Label minWidth="20.0" prefHeight="17.0" prefWidth="28.0" text="and">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="toStep" prefHeight="25.0" prefWidth="199.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="401.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="TOP_RIGHT" text="Condition:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextArea fx:id="conditionTxt" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="401.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="401.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="okbutton" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" text="Ok" />
+                  <Button fx:id="cancelbutton" mnemonicParsing="false" text="Cancel" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" right="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+      <Label fx:id="errorMsg" textFill="#e40f0f">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+   </children>
+</VBox>

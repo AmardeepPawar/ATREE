@@ -1,0 +1,42 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#editstepbutton, #savebutton, #addstepbutton , #deletestepbutton, #undobutton, #redobutton, #addflowbutton, #downloadbutton , #deleteModbutton{
+	-fx-background-color: transparent;
+}
+
+#editstepbutton:pressed, #savebutton:pressed, #addstepbutton:pressed ,#deletestepbutton:pressed , #deleteModbutton:pressed, #undobutton:pressed, #redobutton:pressed , #addflowbutton:pressed, #downloadbutton:pressed {
+    -fx-border-color: white;
+}
+
+
+.tool-bar, #testcasedesigncontrol, #testcasedesigncontrol1 {
+	-fx-border-width: 0.1;
+    -fx-border-style: solid;
+}
+#listOfModules {
+	-fx-border-width: 0.1;
+    -fx-border-style: solid;
+    -fx-background-color: #FFFFFF;
+}
+
+#workArea {
+	-fx-border-width: 0.1;
+    -fx-border-style: solid;
+    -fx-background-color: #FFFFFF;	
+}
+
+#testStep {
+		-fx-border-width: 0.1;
+    -fx-border-style: solid;
+	}
+	
+#designarea {
+	 -fx-border-width: 0.2;
+     -fx-border-style: solid;	
+}
+
+#stepdesignarea {
+	 -fx-border-width: 0.2;
+     -fx-border-style: solid;	
+     -fx-background-color: #FFFFFF;
+}
+

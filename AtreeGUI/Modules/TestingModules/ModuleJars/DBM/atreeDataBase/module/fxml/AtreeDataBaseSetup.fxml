@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+<!-- <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atreeDataBase.module.DataBaseSetupController">
+ -->   
+ <children>
+      <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="606.0" spacing="30.0" style="-fx-background-color: gray;">
+               <children>
+                  <ImageView fx:id="moduleImage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" />
+                  <Label fx:id="moduleHeaderLbl" text="Data Base Module" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Lucida Fax Regular" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox maxHeight="35.0" minHeight="40.0" prefHeight="35.0" prefWidth="200.0" spacing="5.0" style="-fx-border-color: white;">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label maxHeight="25.0" minHeight="25.0" prefHeight="25.0" text="Data Source">
+                     <font>
+                        <Font name="Lucida Fax Demibold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="dataSourceList" prefWidth="150.0" />
+                  <Label minWidth="80.0" />
+                  <RadioButton fx:id="connectionNameRad" minHeight="25.0" mnemonicParsing="false" onAction="#enableConnectionName" text="Connection Name" />
+                  <RadioButton fx:id="connectionDetailRad" minHeight="25.0" mnemonicParsing="false" onAction="#enableConnectionDetail" text="Connection Details" />
+               </children>
+            </HBox>
+            <HBox fx:id="conectDet1HBox" disable="true" maxHeight="40.0" minHeight="40.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label minHeight="25.0" text="Host Name" />
+                  <TextField fx:id="hostNameField" minWidth="350.0" />
+                  <Label minHeight="25.0" text="     Port" />
+                  <TextField fx:id="portNum" maxWidth="60.0" minWidth="60.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="conectDet2HBox" disable="true" minHeight="40.0" prefHeight="40.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label minHeight="25.0" text="User Name" />
+                  <TextField fx:id="userNameField" minWidth="200.0" />
+                  <Label minHeight="25.0" text="     Password" />
+                  <TextField fx:id="passwordField" maxWidth="60.0" minWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="connectionNameHBox" disable="true" maxHeight="25.0" minHeight="35.0" prefHeight="25.0" prefWidth="200.0" spacing="5.0" style="-fx-border-color: white;">
+               <children>
+                  <Label minHeight="25.0" text="Connection Name:" />
+                  <TextField fx:id="connectionNameField" minWidth="350.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: white;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" text="Query:">
+                     <font>
+                        <Font name="Lucida Fax Demibold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="queryField" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="5.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="40.0" minHeight="50.0" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="testConnectBtn" mnemonicParsing="false" text="Test Connection" />
+                  <Button fx:id="saveBtn" mnemonicParsing="false" text="Save" />
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" text="Cancel" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+<!-- </AnchorPane> -->
+</fx:root>

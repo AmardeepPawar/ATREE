@@ -1,0 +1,131 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#cntLoopLinebutton,#editstepbutton, #savebutton, #addstepbutton , #deletestepbutton, #undobutton, #redobutton, #connectflowbutton, #downloadbutton , #deleteModbutton{
+	-fx-background-color: transparent;
+}
+
+#cntLoopLinebutton:pressed, #editstepbutton:pressed, #savebutton:pressed, #addstepbutton:pressed ,#deletestepbutton:pressed , #deleteModbutton:pressed, #undobutton:pressed, #redobutton:pressed , #connectflowbutton:pressed, #downloadbutton:pressed {
+    -fx-border-color: white;
+}
+
+
+.tool-bar, #testcasedesigncontrol, #testcasedesigncontrol1 {
+	-fx-border-width: 0.1;
+    -fx-border-style: solid;
+}
+#listOfModules {
+	-fx-border-width: 0.1;
+    -fx-border-style: solid;
+    -fx-background-color: #FFFFFF;
+}
+
+#workArea {
+	-fx-border-width: 0.1;
+    -fx-border-style: solid;
+    -fx-background-color: #FFFFFF;	
+}
+
+#testStep {
+	-fx-border-width: 0.1;
+    -fx-border-style: solid;
+	}
+	
+#designarea {
+	 -fx-border-width: 0.0 0.2 0.2 0.2;
+     -fx-border-style: solid;	
+}
+
+#stepdesignarea {
+	 -fx-border-width: 0.2;
+     -fx-border-style: solid;	
+     -fx-background-color: #FFFFFF;
+}
+
+#designPageBorderPane:hover {
+	-fx-cursor: h-resize ;	
+}
+
+#listOfModules,#listOfModulesScr,#stepButtonContainer,#filefoldertree,#treecontol, #ModuleButtonContainer,#stepDesignTapPane :hover {
+	-fx-cursor: default;
+}
+
+#cntLoopLinebutton:hover,#editstepbutton:hover, #savebutton:hover, #addstepbutton:hover ,#deletestepbutton:hover , #deleteModbutton:hover, #undobutton:hover, #redobutton:hover , #connectflowbutton:hover, #downloadbutton:hover {
+     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+}
+
+.root {
+    /* A bright blue for highlighting/accenting objects.  For example: selected
+     * text; selected items in menus, lists, trees, and tables; progress bars;
+     * default buttons.
+     */
+    -fx-accent: #E2E1E1;
+
+    /* A bright blue for the focus indicator of objects. Typically used as the
+     * first color in -fx-background-color for the "focused" pseudo-class. Also
+     * typically used with insets of -1.4 to provide a glowing effect.
+     *
+     * TODO: should this be derived from -fx-accent?
+     */
+
+}
+
+
+.tree-table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, -fx-control-inner-background;
+    -fx-padding: 0 0 0 0;
+}
+.tree-table-row-cell:selected {
+    -fx-background-color: #566573, #566573, #D6DBDF;
+}
+
+.tree-table-row-cell:odd {
+    -fx-background-color: -fx-table-cell-border-color, derive(-fx-control-inner-background,-5%);
+}
+
+.tree-table-row-cell:selected:odd {
+    -fx-background-color: #566573, #566573, #D6DBDF;
+}
+
+.combo-box .list-cell 
+{
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+}
+
+.combo-box-popup .list-view 
+{
+    -fx-background-color: white, white;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}    
+
+.combo-box-popup .list-view .list-cell 
+{
+    -fx-padding: 4 0 4 5;
+
+    /* No alternate highlighting */
+    -fx-background-color: white;
+}
+
+.combo-box-base  
+{
+    -fx-skin: "com.sun.javafx.scene.control.skin.ComboBoxBaseSkin";
+    -fx-background-color: transperent;
+    -fx-padding: 0;
+}
+
+.combo-box-base:hover
+{
+    -fx-color: -fx-hover-base;
+}
+
+.tooltip {
+    -fx-background: white;
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-background-radius: 3px;
+}
+
+
+

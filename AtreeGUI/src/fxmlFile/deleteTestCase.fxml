@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" prefHeight="115.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DeleteTestCaseController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Delete Test Case" textFill="#d33913">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="removeTCLabel" alignment="TOP_CENTER" />
+      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="449.0" spacing="15.0">
+         <children>
+            <Button fx:id="okbutton" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="Ok" />
+            <Button fx:id="cancelbutton" contentDisplay="CENTER" mnemonicParsing="false" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

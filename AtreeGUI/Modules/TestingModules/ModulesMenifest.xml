@@ -1,0 +1,3 @@
+<modulesType name="Testing Modules" id="testingModules">
+<module name="Data Base" id="dataBaseMod"  jarFile="DBM.jar" icon="DataBase.jpg"  setUpClassPath="atreeDataBase.module.DataBaseModuleSetup"  executionClassPath=""></module>
+</modulesType>
